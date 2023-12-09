@@ -6,9 +6,11 @@ panels.forEach((panel) => {
     panels.forEach((el) => {
       el.classList.remove("active");
       el.parentElement.classList.remove("active");
+      el.parentElement.children[1].classList.add("hide");
     });
-    
+
     panel.classList.add("active");
     panel.parentElement.classList.add("active");
+    panel.parentElement.children[1].classList.remove("hide");
   });
 });
